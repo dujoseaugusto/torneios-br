@@ -1,0 +1,63 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, iframe,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}*/
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table{border-collapse: collapse; border-spacing: 0;}
+
+/* Geral */
+html, body{margin:0; padding:0; font-family:"Unimed Sans", Arial, Helvetica, sans-serif; height:100%; overflow-y:hidden;
+background: url(../../img/bg_bts_senhas.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+  height:100%;
+  z-index:-1;
+}
+
+@font-face{font-family: "Unimed Serif"; src:url(../font_retiresenha/unimedserif-bolditalic-webfont.otf); src:url(../font_retiresenha/unimedserif-bolditalic-webfont.eot); src:url(../font_retiresenha/unimedserif-bolditalic-webfont.ttf); src:url(../font_retiresenha/unimedserif-bolditalic-webfont.woff);}
+
+#tudo{height: 100%;}   
+
+.fullBg{position:fixed; top:0; left:0; overflow:hidden; z-index:-10;}
+
+.clear{clear:both;}
+/* Geral */
+
+
+
+/* Guiche Inicial */
+#TopoInicial{position:relative; width:100%; background:url(../../img/bg_bt_preferencial.png) repeat; height:auto; text-align:center;}
+#LogoTopo{position:relative; width:100%; background:url(../../img/logo.png) center no-repeat; height:117px;}
+#User{position:relative; margin:0 auto; top:30%; width:50%; text-align:right; color:#FFF; font-family: "Unimed Serif"; font-size:15px; line-height:1.50em;}
+#SelecionaOp{position:relative; width:100%; background:url(../../img/bg_selecione.png) repeat; height:auto; text-align:center;}
+#txtSelecionaOp{position:relative; padding:1%; color:#D37D00; font-family: "Unimed Serif"; font-size:30px;}
+/* Guiche Inicial */
+
+/* Números */
+.txtOps{position:relative; width:50%; margin:0 auto; margin-top:15%;}
+
+#EscolhaOpcao{position:relative; float:left; width:205px; height:56px; background:url(../../img/bg_bt_guiche.png); -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; border:3px #FFF solid; margin-left:1.5%;}
+
+#txtEscolhaOpcao{position:relative; text-align:center; font-family: "Unimed Serif"; color:#FFF; padding-top:5%;}
+#txtEscolhaOpcao h1{font-size:32px;}
+/* Números */
+
+/* Rodapé */
+.footer{position:fixed; bottom:0; width:100%; background:#D37D00; text-align:center; height:auto;}
+/* Rodapé */
