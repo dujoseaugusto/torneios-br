@@ -6,29 +6,35 @@ function conect(){
 $endereco   = strtolower($_SERVER ['REQUEST_URI']);
 $categoria  = "adm";
 
+$host = getenv('DB_HOST');
+$db = getenv('DB_DATABASE');
+$user = getenv('DB_USERNAME');
+$pass = getenv('DB_PASSWORD');
+
 if(strpos($endereco,'adm') !== false){
-    $_SG['paginaLogin']     = 'index.php'; // Página de login
-    $_SG['usuario']         = 'arpagc45_user1';
+    $_SG['paginaLogin']     = 'index.php'; // Pï¿½gina de login
+    $_SG['usuario']         = $user??'arpagc45_user1';
     $_SG['tabela']          = 'arpag_pessoa';
 
 }else{
-    $_SG['paginaLogin']   = 'index.php'; // Página de login
-    $_SG['usuario']       = 'arpagc45_user1';
+    $_SG['paginaLogin']   = 'index.php'; // Pï¿½gina de login
+    $_SG['usuario']       = $user??'arpagc45_user1';
     $_SG['tabela']        = 'arpag_pessoa';
 }
 
-    $_SG['servidor']      = 'localhost';    // Servidor MySQL
-    $_SG['senha']         = '197592';    // Senha MySQL
-    $_SG['banco']         = 'arpagc45_arpag';      // Banco de dados MySQL
-          // Nome da tabela onde os usuários são salvos
+
+    $_SG['servidor']      = $host??'localhost';    // Servidor MySQL
+    $_SG['senha']         = $pass??'197592';    // Senha MySQL
+    $_SG['banco']         = $db??'arpagc45_arpag';      // Banco de dados MySQL
+          // Nome da tabela onde os usuï¿½rios sï¿½o salvos
       // ==============================
       // ======================================
-      //   ~ Não edite a partir deste ponto ~
+      //   ~ Nï¿½o edite a partir deste ponto ~
       // ======================================
 
 $mysql = new mysqli($_SG['servidor'], $_SG['usuario'], $_SG['senha'],$_SG['banco']);
     if (mysqli_connect_errno()) {
-        die('Não foi possível conectar-se ao banco de dados: ' . mysqli_connect_error());
+        die('Nï¿½o foi possï¿½vel conectar-se ao banco de dados: ' . mysqli_connect_error());
     }
     $mysql->set_charset("utf8");
     return $mysql;

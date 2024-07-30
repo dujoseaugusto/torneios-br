@@ -1,0 +1,82 @@
+span.menu2 {
+		display: block;
+		padding-bottom: .5em;
+		cursor: pointer;
+		font-size: 1em;
+		color: #000;
+		position: relative;
+	}
+	ul.nav2 {
+		display: none;
+		margin-top:-10px;
+	}
+.top-nav2 {
+    text-align: center;
+    width: 100%;
+    margin: 0em 0 0 0;/*alterado*/
+	padding:1em;
+}
+.top-nav2 ul {
+  padding: 0;
+  margin: 0;
+}
+.top-nav2 ul li {
+    display: inline;
+    margin: 0.8em 0;/*alterado*/
+	padding:1em;
+}
+.top-nav2 ul li a.active {
+    color: #000000;
+}
+.top-nav2 ul li a {
+    color: #000;
+    font-size: 1.1em;/*alterado*/
+    margin: 0;
+    text-decoration: none;
+}
+.top-nav2 ul li a:hover{
+    color: #000000;
+}
+/* Effect 1: Brackets */
+.cl-effect-2 a::before,
+.cl-effect-2 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	-o-transition: -o-transform 0.3s,opacity 0.2s;
+	-ms-transition:-ms-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-2 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	-o-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-2 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	-o-transform: translateX(-20px);
+	-ms-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-2 a:hover::before,
+.cl-effect-2 a:hover::after,
+.cl-effect-2 a:focus::before,
+.cl-effect-2 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
+}

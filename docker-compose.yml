@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: torneios.net.br
+      DB_PORT: 3306
+      DB_DATABASE: arpagc45_arpag
+      DB_USERNAME: arpagc45_user1
+      DB_PASSWORD: 197592
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
