@@ -461,7 +461,8 @@ function numero_inscricao_novo2($nome,$idmoda,$idpessoa){
         $intervalo_sorteio_ini = $result_ni['n_estacas'];
         $intervalo_sorteio_fim = $result_ni['n_estacas']+$result_ni['n_estacas2'];
     }else{
-        echo "<p class='alert-danger'>O Sistema atingiu o limite de ".$result_ni['n_estacas'] + $result_ni['n_estacas2']." Inscrições.</p>";
+        $limit = $result_ni['n_estacas'] + $result_ni['n_estacas2'];
+        echo "<p class='alert-danger'>O Sistema atingiu o limite de ".$limit." Inscrições.</p>";
         exit;
     }
     
@@ -520,7 +521,8 @@ function numero_inscricao_novo($nome,$idmoda,$idpessoa){
         $intervalo_sorteio_ini = $result_ni['n_estacas'];
         $intervalo_sorteio_fim = $result_ni['n_estacas']+$result_ni['n_estacas2'];
     }else{
-        echo "<p class='alert-danger'>O Sistema atingiu o limite de ".$result_ni['n_estacas'] + $result_ni['n_estacas2']." Inscrições.</p>";
+        $limit = $result_ni['n_estacas'] + $result_ni['n_estacas2'];
+        echo "<p class='alert-danger'>O Sistema atingiu o limite de ".$limit." Inscrições.</p>";
         exit;
     }
     
@@ -937,10 +939,10 @@ function validaCPF($cpf) {
         for ($t = 9; $t < 11; $t++) {
              
             for ($d = 0, $c = 0; $c < $t; $c++) {
-                $d += $cpf{$c} * (($t + 1) - $c);
+                $d += $cpf[$c] * (($t + 1) - $c);
             }
             $d = ((10 * $d) % 11) % 10;
-            if ($cpf{$c} != $d) {
+            if ($cpf[$c] != $d) {
                 return false;
             }
         }

@@ -17,7 +17,13 @@ $banner = '#000';
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
 <script type="text/javascript">
-         window.location.href = "https://torneios.net.br/resultados.php"; 
+	<?php
+		$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+		$host = $_SERVER['HTTP_HOST'];
+		$requestUri = $_SERVER['REQUEST_URI'];
+		$url = $protocol . $host . $requestUri;
+	?>
+         window.location.href = "<?php echo $url;?>resultados.php"; 
 	//Scrool
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
