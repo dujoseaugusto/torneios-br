@@ -2,3 +2,5 @@ log/
 js/
 adm_arpag/includes
 pdf/
+error_log
+adm_arpag/error_log
